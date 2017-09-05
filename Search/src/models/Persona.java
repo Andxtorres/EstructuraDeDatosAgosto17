@@ -18,12 +18,7 @@ public class Persona implements Comparable<Persona>{
 
 	
 	public int compareTo(Persona o) {
-		if(nombre.equals(o.getNombre())){
-			return 0;
-		}
-		else{
-			return 1;
-		}
+		return nombre.compareTo(o.getNombre());
 	}
 
 
