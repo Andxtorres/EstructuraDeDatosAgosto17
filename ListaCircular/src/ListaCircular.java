@@ -62,7 +62,7 @@ public class ListaCircular<T extends Comparable<T>> {
 		if(posicion==0){
 			agregarAlInicio(elemento);
 		}
-		if(posicion<tamanio){
+		if(posicion<tamanio&&posicion!=0){
 			Nodo<T> temp= first;
 			Nodo<T> anterior= new Nodo<T>();
 			for (int i = 0; i < posicion; i++) {

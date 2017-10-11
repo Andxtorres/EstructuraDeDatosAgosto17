@@ -7,8 +7,9 @@ public class Main {
 		listaCircular.agregarAlFinal(8);
 		listaCircular.agregarAlFinal(1);
 		listaCircular.agregarAlInicio(10);
-		listaCircular.insertarEnPosicion(15, 0);
+		listaCircular.insertarEnPosicion(15, 4);
 		listaCircular.imprimirLista();
 		System.out.println("El elemento en 1 es: "+listaCircular.buscarEnPosicion(1).getElemento());
+		System.out.println("El tamaño es: "+listaCircular.getTamanio());
 	}
 }
