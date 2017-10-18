@@ -3,6 +3,7 @@ public class ListaCircular<T extends Comparable<T>> {
 	private Nodo<T> first;
 	private Nodo<T> ultimo;
 	private int tamanio;
+	
 	public boolean estaVacia(){
 		return first==null;
 	}

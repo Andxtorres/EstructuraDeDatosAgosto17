@@ -1,5 +1,5 @@
 
-public class Nodo<T> {
+public class Nodo<T extends Comparable<T>> {
 	private T elemento;
 	private Nodo<T> anterior;
 	private Nodo<T> siguiente;

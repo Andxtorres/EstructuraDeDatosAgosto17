@@ -60,11 +60,27 @@ public class ListaLigada<T> {
 		if(estaVacia()){
 			throw new ListaVaciaException();
 		}else{
-			Nodo<T> temp= new Nodo<>();
-			for (int i = 0; i < numElementos()-1; i++) {
-				temp=temp.getSiguiente();
+			Nodo<T> temp=first;
+			Nodo<T> prev= new Nodo<>();
+			if(temp.getSiguiente()==null){
+				first=null;
+			}else{
+				while(temp!=null){
+					prev=temp;
+					temp=temp.getSiguiente();
+				}
 			}
+			System.out.println("Prev: "+prev.getT());
+			prev.setSiguiente(null);
 		}
+	}
+	
+	public void eliminarAlInicio() throws ListaVaciaException{
+		if(estaVacia()){
+			throw new ListaVaciaException();
+		}else{
+			first=first.getSiguiente();
+		}		
 	}
 	
 	
