@@ -3,7 +3,7 @@ public class Entry<K,V> {
 	
 	private K key;
 	private V value;
-	
+	private Entry<K,V> siguiente;
 	
 	
 	public Entry(K key, V value) {
@@ -22,6 +22,12 @@ public class Entry<K,V> {
 	}
 	public void setValue(V value) {
 		this.value = value;
+	}
+	public Entry<K, V> getSiguiente() {
+		return siguiente;
+	}
+	public void setSiguiente(Entry<K, V> siguiente) {
+		this.siguiente = siguiente;
 	}
 	
 	

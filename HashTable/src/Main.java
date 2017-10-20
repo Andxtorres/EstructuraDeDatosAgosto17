@@ -29,6 +29,17 @@ public class Main {
 		a2.setNombre("Pedro Lopez");
 		hashTable.add(a2, 7.5);
 		hashTable.imprimeTabla();
+		Alumno a3= new Alumno();
+		a3.setMatricula("A01211934");
+		a3.setNombre("Alumno Colison");
+		hashTable.add(a3,6.5);
+		Alumno a4= new Alumno();
+		a4.setMatricula("A01211954");
+		a4.setNombre("Colision 2");
+		hashTable.add(a4,8.0);
+		hashTable.imprimeTabla();
+		System.out.println("Si buscamos el elemento: a3 su value es: "+hashTable.find(a1));
+
 		
 		
 	}

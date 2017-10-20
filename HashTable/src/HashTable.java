@@ -10,8 +10,35 @@ public class HashTable<K,V> {
 	public void add(K key, V value){
 		Entry<K,V> entry=new Entry<>(key,value);
 		int position= hashPosition(key);
-		table[position]=entry;
+		if(table[position]!=null){
+			Entry<K,V> temp= table[position];
+			while(temp.getSiguiente()!=null){
+				temp=temp.getSiguiente();
+			}
+			temp.setSiguiente(entry);
+		}else{
+			table[position]=entry;
+
+		}
 		
+	}
+	
+	public V find(K key){
+		int pos= hashPosition(key);
+		if(table[pos]!=null){
+			Entry<K,V> temp= table[pos];
+			while(temp!=null){
+				if(temp.getKey().equals(key)){
+					
+					return temp.getValue();
+				}else{
+					temp=temp.getSiguiente();
+				}
+			}
+			return null;
+		}else{
+			return null;
+		}
 	}
 	
 	
@@ -24,7 +51,13 @@ public class HashTable<K,V> {
 	public void imprimeTabla(){
 		for (int i = 0; i < table.length; i++) {
 			if(table[i]!=null){
-				System.out.println(i+".-"+"Key: "+table[i].getKey().toString()+" Value: "+table[i].getValue());
+				Entry<K,V> temp= table[i];
+
+				while(temp!=null){
+					System.out.print(i+".-"+"Key: "+temp.getKey().toString()+" Value: "+temp.getValue()+"");
+					temp=temp.getSiguiente();
+				}
+				System.out.println("");
 			}else{
 				System.out.println(i+".-"+"Vacío");
 			}
