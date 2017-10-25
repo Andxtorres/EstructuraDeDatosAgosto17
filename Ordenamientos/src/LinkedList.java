@@ -92,4 +92,20 @@ public class LinkedList<T extends Comparable<T>> {
 			}
 		}
 	}
+	public LinkedList<T> insertionSort(){
+		
+		for(int i= 1;i<this.tamanio();i++){
+			int j= i;
+			while((j>0) &&(this.obtenerElementoEn(j-1).compareTo(this.obtenerElementoEn(j))>0)){
+				this.swap(j,j-1);
+				System.out.println("-----Algoritmo sin terminar------");
+				this.printList();
+				System.out.println("-------------");
+				j=j-1;
+			}
+		}
+		
+		return this;
+		
+	}
 }
