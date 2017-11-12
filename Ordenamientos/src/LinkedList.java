@@ -92,6 +92,18 @@ public class LinkedList<T extends Comparable<T>> {
 			}
 		}
 	}
+	public void printListFromNode(Node<T> nodo){
+		if(nodo==null){
+			System.out.println("Lista vacía");
+		}else{
+			Node<T> temp= nodo;
+			while(temp!=null){
+				
+				System.out.println(temp.getElement());
+				temp= temp.getNext();
+			}
+		}
+	}
 	public LinkedList<T> insertionSort(){
 		
 		for(int i= 1;i<this.tamanio();i++){
@@ -108,4 +120,14 @@ public class LinkedList<T extends Comparable<T>> {
 		return this;
 		
 	}
+
+	public Node<T> getFirst() {
+		return first;
+	}
+
+	public void setFirst(Node<T> first) {
+		this.first = first;
+	}
+	
+	
 }
