@@ -1,4 +1,5 @@
 
+
 public class Nodo<T extends Comparable<T>> {
 	
 	private T elemento;

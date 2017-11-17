@@ -13,6 +13,9 @@ public class Main {
 		a.insertaElemento(6);
 		a.insertaElemento(9);
 		a.insertaElemento(10);
+		Nodo<Integer> n1=a.buscarElemento(10);
+		n1.setIzquierdo(new Nodo<>(17));
+		
 		System.out.println("Mi nodo raíz es: "+a.getRaiz().getElemento());
 		a.enOrden();
 
@@ -26,7 +29,7 @@ public class Main {
 		}else{
 			System.out.println("Elemento encontrado");
 		}
-
+		
 	}
 
 }
